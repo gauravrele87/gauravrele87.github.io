@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Pomodoro</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+    </head>
+    <body>
+        <h1 class ="text-center Pomodoroh1">Pomodoro Clock</h1>
+        <div class="container-fluid text-center">
+            
+            <div> 
+                <div class ="col-lg-6 well startInput">
+                    Break Time <br>
+                    <button class = "minus1">&#8722;</button> 
+                    <input type="button" class = "breakTime" value="5" />
+                    <button class ="plus1">&#43;</button> 
+                </div>
+                <div class ="col-lg-6 well startInput">
+                    Work Time <br>
+                    <button class = "minus2">&#8722;</button> 
+                    <input type="button" class = "workTime" value="1" />
+                    <button class ="plus2">&#43;</button> 
+                </div>   
+            </div>
+            
+            <br>
+            <div class ="bordershade">
+                <div class ="countdownTimer digit"></div>
+            </div>
+           <br><br><br>
+            <div>
+                <button class = "Reset">Reset</button>
+            </div>
+            <div class = "timeSec">SEC</div>
+            <div class = "timeMin">MIN</div>
+        </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script src="js/pamodoro.js"></script>
+    </body>
+</html>

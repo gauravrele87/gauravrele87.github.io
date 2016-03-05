@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+  <head>
+    <title>
+      The life of G
+    </title>
+    <link rel ="stylesheet" type="text/css" href="site.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  </head>
+  <body>
+      <div class="centered"> <img src="spongebob.jpg"></div>
+      
+      <h1 class="centered sansSerif">Hello world!This is the page for Nell(gare) </h1>
+      <div>
+          <a href="about.html"> About</a>     
+      </div>
+      <div> 
+          <a href="current.html">In works</a>
+      </div>
+      <div>
+          <a href="Projects.html">Some fun things I have done</a>
+      </div>
+      <div>
+          <a href="Extra.html">Extra Curricular</a>
+      </div>
+      <div>
+          <a href ="contact.php">Contact Me</a>
+      </div>
+      
+      <Button onClick = "background()"> Click to change color</Button>
+      <script>
+         // document.body.style.backgroundColor = "yellow";
+         var counter=3;
+          function background(){
+              switch(counter%3){
+                  case 0:
+                      document.body.style.backgroundColor = "green";
+                      break;
+                  case 1:
+                      document.body.style.backgroundColor = "red";
+                      break;
+                  case 2:
+                      document.body.style.backgroundColor = "yellow";
+                      break;
+              }
+              counter++;
+          }
+      </script>
+      
+  </body>
+</html>

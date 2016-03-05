@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Gaurav P. Rele</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script>
+    var html5_audiotypes={ //define list of audio file extensions and their associated audio types. Add to it if your specified audio file isn't on this list:
+	"mp3": "audio/mpeg",
+	"mp4": "audio/mp4",
+	"ogg": "audio/ogg",
+	"wav": "audio/wav"
+    }
+
+    function createsoundbite(sound){
+	var html5audio=document.createElement('audio')
+	if (html5audio.canPlayType){ //check support for HTML5 audio
+		for (var i=0; i<arguments.length; i++){
+			var sourceel=document.createElement('source')
+			sourceel.setAttribute('src', arguments[i])
+			if (arguments[i].match(/\.(\w+)$/i))
+				sourceel.setAttribute('type', html5_audiotypes[RegExp.$1])
+			html5audio.appendChild(sourceel)
+		}
+		html5audio.load()
+		html5audio.playclip=function(){
+			html5audio.pause()
+			html5audio.currentTime=0
+			html5audio.play()
+		}
+		return html5audio
+	}
+	else{
+		return {playclip:function(){throw new Error("Your browser doesn't support HTML5 audio unfortunately")}}
+	}
+    }
+    var fullName = createsoundbite("sound/full.mp3")
+    var nickName = createsoundbite("sound/g.mp3")
+</script>
+<script>
+$(document).ready(function(){
+			$(".menu-toggle a").click(function(){ 
+				$(".menu").slideToggle(700);
+			});
+		});
+</script>
+</head>
+
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <!-- Navigation -->
+   <!-- <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+               <button type="button" class="navbar-toggle" >
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+           <!--  <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                  <!--   <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+       <!--  </div>
+        <!-- /.container -->
+   <!--  </nav>-->
+   	<div class="menu">
+            <a> <i class ="fa fa-times"></i> </a>
+	  <ul>
+	    <li>I. Home</li>
+	    <li>II. About</li>
+	    <li>III. Services</li>
+	    <li>IV. Blog</li>
+	    <li>VI. Contact</li>
+	  </ul>
+	</div>
+<div class="menu-toggle"> <a class ="hvr-buzz-out" href="#"><i class="fa fa-cog fa-lg"></i></a> </div>
+    <!-- Intro Section -->
+   
+    <section id="intro" class="intro-section">
+        <div class="yose"><img src="imges/yosemite.jpg"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="img-thumbnail" src ="imges/cover.png" height = '340' width = '270'>
+                    <h1>Gaurav Rele</h1>
+                    <p class ="names"> Hello! My name is  
+                        <a class = "full" onclick = "fullName.playclip()" style="color: gray">
+                            <i class ="fa fa-volume-up"></i> Gaurav Rele.
+                        </a> Friends call me <a class="nickName" onclick="nickName.playclip()" style="color:gray">
+                            <i class ="fa fa-volume-up"></i>
+                            Gee</a>
+                    </p> 
+                    
+                    <ul class = "list-inline">
+                        <li>
+                            <a class = "iconLi" href ="https://www.linkedin.com/in/gauravrele">
+                                <i class ="fa fa-linkedin fa-3x"></i> 
+                            </a>
+                        </li>
+                        <li>
+                            <a class = "icongit" href ="https://github.com/gauravrele87">
+                                <i class ="fa fa-github fa-3x"></i> 
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="row">
+            <div class="col-lg-12">
+            <h1>About</h1>
+            <div class='aboutdiv'>
+                <p> I am an international student who graduated from <a href="https://www.sfsu.edu">San Francisco State University</a> with a Masters (M.S) in Physics</p>
+                <p></p>
+                <p>I love to play video games.I have been hooked on the 
+                famous <a href="https://en.wikipedia.org/wiki/Multiplayer_online_battle_arena">MOBA</a>
+                game <a href="http://na.leagueoflegends.com/">League of Legends</a> for about 2 years now.</p>
+                <p>I also keep a list of games that I've played till now along with some reviews as I remember them.</p>
+                <p>Apart from hiding in the house playing games, I love watching and playing sports. I was introduced to American Football(or Football as its called here)
+                 and baseball when I came to United States. But my favorite sport of all time will always be football (Soccer). </p>
+            </div>
+            
+        </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="wav"><img src="imges/wavthesis.jpg"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Fun things I've done</h1>
+                    <p>I love to learn new things. I am learning Spark and Hadoop right now. I took 
+                    <a href="https://www.coursera.org/learn/machine-learning">Coursera's Machine learning</a> 
+                    course taught by Andrew Ng. This course has piqued my interest in data analysis 
+                    and machine learning right now. I am also looking forward to Coursera's Hadoop course in 
+                    October.</p>
+                    <p> I also made a solar system model along with other simulations in Python</p>
+                    <p> Having learned C++ for a couple of years, I developed a budgeting application 
+                        for a single user.I also made a <a href = "randQuote.html">random quote generator</a> in Javascript</p>
+                    <h1> Research </h1>
+                    <p>I had the opportunity to work with <a href="http://www.physics.sfsu.edu/~bland/">
+                    Dr. Roger Bland</a> over the past 3 and a half years measuring the effect of ship noise 
+                    on <a href="https://en.wikipedia.org/wiki/Midshipman_fish">Plainfin Midshipman</a>. This was
+                    also my <a href='thesis.pdf'>thesis topic for my masters degree</a>.
+                    </p>
+                    <p>
+                        I have also made a robotic vehicle along with others using <a href="https://en.wikipedia.org/wiki/Mecanum_wheel">Mecanum Wheels</a> that could move in
+                        any direction without changing the reference frame of the robot. The video is on<a href="https://www.youtube.com/watch?v=edLgpPdB5_g">Youtube</a>. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1> And finally....</h1>
+                    <h1>Here's my resume</h1>
+                    <a href="cv.pdf"><i class="fa fa-file-pdf-o fa-3x"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    $(document).ready(function(){
+			$(".menu-toggle a").click(function(){ 
+				$(".menu").slideToggle(700);
+			});
+		});
+    </script>
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+    <!---big shoutout to DeeDee das who has unknowingly helped me make this site--->
+
+</body>
+</html>

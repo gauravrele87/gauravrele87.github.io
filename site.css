@@ -1,0 +1,12 @@
+root { 
+    display: block;
+}
+body{
+    //background-color:yellow;
+}
+.centered{
+    text-align: center;
+}
+.sansSerif{
+    font-family: sans-serif;
+}
