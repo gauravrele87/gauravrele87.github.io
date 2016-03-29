@@ -18,12 +18,6 @@
     <link href="css/scrolling-nav.css" rel="stylesheet">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
     <script>
     var html5_audiotypes={ //define list of audio file extensions and their associated audio types. Add to it if your specified audio file isn't on this list:
 	"mp3": "audio/mpeg",
@@ -69,40 +63,7 @@ $(document).ready(function(){
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-    <!-- Navigation -->
-   <!-- <nav class="navbar navbar-default" role="navigation">
-        <div class="container">
-            <div class="navbar-header page-scroll">
-               <button type="button" class="navbar-toggle" >
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-           <!--  <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                  <!--   <li class="hidden">
-                        <a class="page-scroll" href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#services">Services</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-       <!--  </div>
-        <!-- /.container -->
+ 
    <!--  </nav>-->
    	<div class="menu">
             <a> <i class ="fa fa-times"></i> </a>
@@ -110,26 +71,27 @@ $(document).ready(function(){
 	    <li>I. Home</li>
 	    <li>II. About</li>
 	    <li>III. Services</li>
-	    <li>IV. Blog</li>
+	    <li>IV. Fun things</li>
 	    <li>VI. Contact</li>
 	  </ul>
 	</div>
 <div class="menu-toggle"> <a class ="hvr-buzz-out" href="#"><i class="fa fa-cog fa-lg"></i></a> </div>
     <!-- Intro Section -->
    
-    <section id="intro" class="intro-section">
-        <div class="yose"><img src="imges/yosemite.jpg"></div>
+    <div id="intro" class="intro-section">
+        <div class="yose" style = "background-image: url(imges/yosemite.jpg)">    
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <img class="img-thumbnail" src ="imges/cover.png" height = '340' width = '270'>
-                    <h1>Gaurav Rele</h1>
-                    <p class ="names"> Hello! My name is  
-                        <a class = "full" onclick = "fullName.playclip()" style="color: gray">
-                            <i class ="fa fa-volume-up"></i> Gaurav Rele.
-                        </a> Friends call me <a class="nickName" onclick="nickName.playclip()" style="color:gray">
+                    <img class="img-thumbnail" src ="imges/cover.png" height = '240' width = '170'>
+                    <h1 style="color:white">Gaurav Rele</h1>
+                    <p class ="names" style="color: white"> Hello! My name is  
+                        <a class = "full" onclick = "fullName.playclip()" style="color: whitesmoke">
+                            <i class ="fa fa-volume-up"></i> <u>Gaurav Rele</u>.
+                        </a> Friends call me <a class="nickName" onclick="nickName.playclip()" style="color:whitesmoke">
                             <i class ="fa fa-volume-up"></i>
-                            Gee</a>
+                            <u>Gee</u></a>
                     </p> 
                     
                     <ul class = "list-inline">
@@ -147,10 +109,10 @@ $(document).ready(function(){
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- About Section -->
-    <section id="about" class="about-section">
+    <div id="about" class="about-section">
         <div class="container">
             <div class="row">
             <div class="col-lg-12">
@@ -169,11 +131,10 @@ $(document).ready(function(){
         </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Services Section -->
-    <section id="services" class="services-section">
-        <div class="wav"><img src="imges/wavthesis.jpg"></div>
+    <section id="stuff" class="stuff-section" style="background-image: url(imges/wavthesis.jpg);background-size: cover;max-height: 100%;max-width: 100%">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -190,11 +151,11 @@ $(document).ready(function(){
                     <p>I had the opportunity to work with <a href="http://www.physics.sfsu.edu/~bland/">
                     Dr. Roger Bland</a> over the past 3 and a half years measuring the effect of ship noise 
                     on <a href="https://en.wikipedia.org/wiki/Midshipman_fish">Plainfin Midshipman</a>. This was
-                    also my <a href='thesis.pdf'>thesis topic for my masters degree</a>.
+                    also my <a href='raw/thesis.pdf'>thesis topic for my masters degree</a>.
                     </p>
                     <p>
                         I have also made a robotic vehicle along with others using <a href="https://en.wikipedia.org/wiki/Mecanum_wheel">Mecanum Wheels</a> that could move in
-                        any direction without changing the reference frame of the robot. The video is on<a href="https://www.youtube.com/watch?v=edLgpPdB5_g">Youtube</a>. 
+                        any direction without changing the reference frame of the robot. The video is on <a href="https://www.youtube.com/watch?v=edLgpPdB5_g">Youtube</a>. 
                     </p>
                 </div>
             </div>
@@ -208,7 +169,7 @@ $(document).ready(function(){
                 <div class="col-lg-12">
                     <h1> And finally....</h1>
                     <h1>Here's my resume</h1>
-                    <a href="cv.pdf"><i class="fa fa-file-pdf-o fa-3x"></i></a>
+                    <a href="raw/cv.pdf"><i class="fa fa-file-pdf-o fa-3x"></i></a>
                 </div>
             </div>
         </div>
@@ -231,6 +192,6 @@ $(document).ready(function(){
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/scrolling-nav.js"></script>
     <!---big shoutout to DeeDee das who has unknowingly helped me make this site--->
-
+    
 </body>
 </html>

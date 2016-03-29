@@ -5,7 +5,9 @@
  */
 
 body {
-
+    width:100%;
+    height: 100%;
+    text-align: center;
 }
 @media (max-width: 1000px) {
   body { 
@@ -90,39 +92,43 @@ html {
     font-family: Brush Script MT,cursive;
 }
 
-
-/* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
-The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children 
-of those sections to manage the look and feel of the site. */
-
+.img-thumbnail{
+    margin-top: 80px;
+}
 .intro-section {
-    height: 100vh;
+    height: 100%;
+    width: 100%;
     padding-top: 0px;
     text-align: center;
-    font-size: 2.5vw;
+    font-size: 1vw;
     color: black;  
-    overflow: hidden;
+
+    z-index: 1;
+    //overflow: hidden;
 }
 .intro-section h1{
     font-size: 4vw;
     opacity:1;
 }
 
-.yose{
-    opacity: 1;
-    height: 50px;
+ .yose{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url(imges/yosemite1.jpg) center;
+    opacity: .9;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;   
+    background-repeat: no-repeat;
+    background-size:cover;
 }
 
 .wav{
     height: 50px;
-}
-
-.yose img{
-    opacity:0.4;
-    height:100vh;
-    width:100vw;
-    background-size: cover;
-    background-attachment: fixed;
 }
 
 .wav img{
@@ -137,28 +143,36 @@ of those sections to manage the look and feel of the site. */
     width: 100vw;
     text-align: center;
     background: #eee;
-    font-size: 2vw;
+    font-size: 1vw;
 }
 
 .about-section h1{
     font-size:4vw
 }
 
+.container{
+    width:60%
+}
+
 .aboutdiv{
     margin: auto;
-    width: 90%;
+    width: 70%;
 }
 
-.services-section {
+.stuff-section {
     text-align: center;
     background: #fff;
-    min-height: text-height;
-    overflow: hidden;
-    font-size: 2vw;
+    //min-height: text-height;
+    //overflow: hidden;
+    font-size: 1vw;
+    height:100%;
+    width:100%;
+    background-attachment: fixed;
 }
 
-.services-section h1{
+.stuff-section h1{
     font-size: 4vw;
+    text-align:center;
 }
 
 .contact-section {
